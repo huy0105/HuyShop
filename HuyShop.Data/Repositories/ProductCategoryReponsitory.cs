@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using HuyShop.Data.Infrastructure;
+﻿using HuyShop.Data.Infrastructure;
 using HuyShop.Model.Models;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace HuyShop.Data.Repositories
