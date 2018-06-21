@@ -1,6 +1,6 @@
 ﻿namespace HuyShop.Data.Infrastructure
 {
-    public interface IUnitOfWorkcs
+    public interface IUnitOfWork
     {
         void Commit();
     }

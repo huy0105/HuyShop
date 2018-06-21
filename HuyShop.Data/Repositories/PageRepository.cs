@@ -3,7 +3,7 @@ using HuyShop.Model.Models;
 
 namespace HuyShop.Data.Repositories
 {
-    public interface IPageRepository
+    public interface IPageRepository:IRepository<Page>
     {
     }
 

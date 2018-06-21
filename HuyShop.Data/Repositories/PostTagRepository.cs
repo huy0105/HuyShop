@@ -3,7 +3,7 @@ using HuyShop.Model.Models;
 
 namespace HuyShop.Data.Repositories
 {
-    public interface IPostTagRepository
+    public interface IPostTagRepository : IRepository<PostTag>
     {
     }
 

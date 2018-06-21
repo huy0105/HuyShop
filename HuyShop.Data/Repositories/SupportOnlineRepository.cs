@@ -3,7 +3,7 @@ using HuyShop.Model.Models;
 
 namespace HuyShop.Data.Repositories
 {
-    public interface ISupportOnlineRepository
+    public interface ISupportOnlineRepository : IRepository<SupportOnline>
     {
     }
 

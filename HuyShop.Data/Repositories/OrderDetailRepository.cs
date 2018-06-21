@@ -3,7 +3,7 @@ using HuyShop.Model.Models;
 
 namespace HuyShop.Data.Repositories
 {
-    public interface IOrderDetailRepository
+    public interface IOrderDetailRepository:IRepository<OrderDetail>
     {
     }
 

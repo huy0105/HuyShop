@@ -3,7 +3,7 @@ using HuyShop.Model.Models;
 
 namespace HuyShop.Data.Repositories
 {
-    public interface ISlideRepository
+    public interface ISlideRepository : IRepository<Slide>
     {
     }
 
