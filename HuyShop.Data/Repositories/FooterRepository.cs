@@ -3,7 +3,7 @@ using HuyShop.Model.Models;
 
 namespace HuyShop.Data.Repositories
 {
-    public interface IFooterRepository : IRepository<Footer>
+    public interface IFooterRepository
     {
     }
 
@@ -11,7 +11,6 @@ namespace HuyShop.Data.Repositories
     {
         public FooterRepository(IDbFactory dbFactory) : base(dbFactory)
         {
-
         }
     }
 }
