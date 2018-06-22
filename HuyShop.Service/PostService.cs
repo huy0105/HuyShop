@@ -1,9 +1,7 @@
 ﻿using HuyShop.Data.Infrastructure;
 using HuyShop.Data.Repositories;
 using HuyShop.Model.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace HuyShop.Service
 {
@@ -19,7 +17,7 @@ namespace HuyShop.Service
 
         IEnumerable<Post> GetAllPaging(int page, int pageSize, out int totalRow);
 
-        IEnumerable<Post> GetAllByCategoryPaging(int categoryId,int page, int pageSize, out int totalRow);
+        IEnumerable<Post> GetAllByCategoryPaging(int categoryId, int page, int pageSize, out int totalRow);
 
         Post GetById(int id);
 
@@ -30,9 +28,9 @@ namespace HuyShop.Service
 
     public class PostService : IPostService
     {
-        IPostRepository _postRepository;
-        IUnitOfWork _unitOfWork;
-            
+        private IPostRepository _postRepository;
+        private IUnitOfWork _unitOfWork;
+
         public PostService(IPostRepository postRepository, IUnitOfWork unitOfWork)
         {
             this._postRepository = postRepository;
