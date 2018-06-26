@@ -7,13 +7,13 @@ namespace HuyShop.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class InitialDb : IMigrationMetadata
+    public sealed partial class Huynew : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialDb));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Huynew));
         
         string IMigrationMetadata.Id
         {
-            get { return "201806260309378_InitialDb"; }
+            get { return "201806260502395_Huynew"; }
         }
         
         string IMigrationMetadata.Source
