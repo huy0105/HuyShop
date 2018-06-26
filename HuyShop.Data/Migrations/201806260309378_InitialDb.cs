@@ -8,6 +8,17 @@ namespace HuyShop.Data.Migrations
         public override void Up()
         {
             CreateTable(
+                "dbo.Errors",
+                c => new
+                    {
+                        ID = c.Int(nullable: false, identity: true),
+                        Message = c.String(),
+                        StackTrace = c.String(),
+                        CreatedDate = c.DateTime(nullable: false),
+                    })
+                .PrimaryKey(t => t.ID);
+            
+            CreateTable(
                 "dbo.Footers",
                 c => new
                     {
@@ -324,6 +335,7 @@ namespace HuyShop.Data.Migrations
             DropTable("dbo.Menus");
             DropTable("dbo.MenuGroups");
             DropTable("dbo.Footers");
+            DropTable("dbo.Errors");
         }
     }
 }
