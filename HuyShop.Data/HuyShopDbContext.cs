@@ -6,7 +6,7 @@ namespace HuyShop.Data
 {
     public class HuyShopDbContext : DbContext
     {
-        public HuyShopDbContext() : base("Huy")
+        public HuyShopDbContext() : base("HuyShop")
         {
             this.Configuration.LazyLoadingEnabled = false;
         }
