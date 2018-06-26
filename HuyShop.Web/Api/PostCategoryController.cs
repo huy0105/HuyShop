@@ -1,36 +1,25 @@
-﻿using HuyShop.Web.Infrastructure.Core;
+﻿using HuyShop.Service;
+using HuyShop.Web.Infrastructure.Core;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Web.Http;
 
 namespace HuyShop.Web.Api
 {
     public class PostCategoryController : ApiControllerBase
     {
-        // GET api/<controller>
-        public IEnumerable<string> Get()
+        IPostCategoryService _postCategoryService;
+        public PostCategoryController(IErrorService errorService, IPostCategoryService postCategoryService)
+            : base(errorService)
         {
-            return new string[] { "value1", "value2" };
+            this._postCategoryService = postCategoryService;
         }
 
-        // GET api/<controller>/5
-        public string Get(int id)
+        public HttpResponseMessage Create(HttpRequestMessage request, IPostCategoryService postCategoryService)
         {
-            return "value";
+
+           
         }
 
-        // POST api/<controller>
-        public void Post([FromBody]string value)
-        {
-        }
-
-        // PUT api/<controller>/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/<controller>/5
-        public void Delete(int id)
-        {
-        }
     }
 }
