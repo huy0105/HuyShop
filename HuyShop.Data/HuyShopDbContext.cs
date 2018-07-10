@@ -1,10 +1,10 @@
 ﻿using HuyShop.Model.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System.Data.Entity;
-using System.Collections.Generic;
 
 namespace HuyShop.Data
 {
-    public class HuyShopDbContext : DbContext
+    public class HuyShopDbContext : IdentityDbContext<ApplicationUser>
     {
         public HuyShopDbContext() : base("HuyShop")
         {
@@ -30,9 +30,15 @@ namespace HuyShop.Data
         public DbSet<VisitorStatistic> VisitorStatistics { set; get; }
         public DbSet<Error> Errors { set; get; }
 
+        public static HuyShopDbContext Create()
+        {
+            return new HuyShopDbContext();
+        }
+
         protected override void OnModelCreating(DbModelBuilder builder)
         {
-            
+            builder.Entity<IdentityUserRole>().HasKey(i => new { i.UserId,i.RoleId });
+            builder.Entity<IdentityUserLogin>().HasKey(i => i.UserId);
         }
     }
 }

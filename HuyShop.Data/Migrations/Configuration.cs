@@ -1,5 +1,8 @@
 namespace HuyShop.Data.Migrations
 {
+    using HuyShop.Model.Models;
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -14,10 +17,30 @@ namespace HuyShop.Data.Migrations
 
         protected override void Seed(HuyShop.Data.HuyShopDbContext context)
         {
-            //  This method will be called after migrating to the latest version.
+            var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new HuyShopDbContext()));
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data.
+            var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new HuyShopDbContext()));
+
+            var user = new ApplicationUser()
+            {
+                UserName = "huy",
+                Email = "huynv@nal.vn",
+                EmailConfirmed = true,
+                Birthday = DateTime.Now,
+                FullName = "Technology Education"
+
+            };
+            manager.Create(user, "123456abc");
+
+            if (!roleManager.Roles.Any())
+            {
+                roleManager.Create(new IdentityRole { Name = "Admin" });
+                roleManager.Create(new IdentityRole { Name = "User" });
+            }
+
+            var adminUser = manager.FindByEmail("huynv@nal.vn");
+
+            manager.AddToRoles(adminUser.Id, new string[] { "Admin", "User" });
         }
     }
 }

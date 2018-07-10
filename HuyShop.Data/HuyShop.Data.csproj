@@ -36,6 +36,12 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -58,6 +64,14 @@
     <Compile Include="Migrations\201806260502395_Huynew.cs" />
     <Compile Include="Migrations\201806260502395_Huynew.Designer.cs">
       <DependentUpon>201806260502395_Huynew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807090340010_Identity.cs" />
+    <Compile Include="Migrations\201807090340010_Identity.Designer.cs">
+      <DependentUpon>201807090340010_Identity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807100411020_ChangeKey.cs" />
+    <Compile Include="Migrations\201807100411020_ChangeKey.Designer.cs">
+      <DependentUpon>201807100411020_ChangeKey.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -97,6 +111,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201806260502395_Huynew.resx">
       <DependentUpon>201806260502395_Huynew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807090340010_Identity.resx">
+      <DependentUpon>201807090340010_Identity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807100411020_ChangeKey.resx">
+      <DependentUpon>201807100411020_ChangeKey.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

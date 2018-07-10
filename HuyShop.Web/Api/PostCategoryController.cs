@@ -2,13 +2,12 @@
 using HuyShop.Model.Models;
 using HuyShop.Service;
 using HuyShop.Web.Infrastructure.Core;
+using HuyShop.Web.Infrastructure.Extensions;
 using HuyShop.Web.Models;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using HuyShop.Web.Infrastructure.Extensions;
-
 
 namespace HuyShop.Web.Api
 {
