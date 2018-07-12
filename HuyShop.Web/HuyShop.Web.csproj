@@ -220,6 +220,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\app.routes.js" />
+    <Content Include="app\appjs.js" />
+    <Content Include="app\components\product\productAddController.js" />
+    <Content Include="app\components\product\productAddView.html" />
+    <Content Include="app\components\product\productEditController.js" />
+    <Content Include="app\components\product\productEditview.html" />
+    <Content Include="app\components\product\productListController.js" />
+    <Content Include="app\components\product\productListView.html" />
+    <Content Include="app\components\product\product.routers.js" />
+    <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="ApplicationInsights.config">
@@ -235,11 +245,19 @@
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="app\components\oders\" />
+    <Folder Include="app\components\product_category\" />
+    <Folder Include="app\components\roles\" />
+    <Folder Include="app\components\users\" />
+    <Folder Include="app\share\footer\" />
+    <Folder Include="app\share\navigation\" />
+    <Folder Include="app\share\services\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Assets\admin\" />
+    <Folder Include="Assets\admin\css\" />
+    <Folder Include="Assets\admin\img\" />
+    <Folder Include="Assets\admin\js\" />
+    <Folder Include="Assets\admin\libs\" />
     <Folder Include="Assets\client\" />
-    <Folder Include="Scripts\plugins\" />
-    <Folder Include="Scripts\spa\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -251,7 +269,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bower.json" />
+    <Content Include=".bowerrc" />
     <None Include="packages.config" />
+    <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HuyShop.Common\HuyShop.Common.csproj">
