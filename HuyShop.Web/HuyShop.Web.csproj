@@ -233,6 +233,10 @@
     <Content Include="app\components\product\productListView.html" />
     <Content Include="app\components\product\products.module.js" />
     <Content Include="app\share\modules\huyshop.common.js" />
+    <Content Include="App_Data\HuyShop.mdf" />
+    <Content Include="App_Data\HuyShop_log.ldf">
+      <DependentUpon>HuyShop.mdf</DependentUpon>
+    </Content>
     <Content Include="Assets\admin\components\bootstrap-colorpicker\dist\css\bootstrap-colorpicker.css" />
     <Content Include="Assets\admin\components\bootstrap-colorpicker\dist\css\bootstrap-colorpicker.min.css" />
     <Content Include="Assets\admin\components\bootstrap-colorpicker\dist\img\bootstrap-colorpicker\alpha-horizontal.png" />
@@ -6867,7 +6871,6 @@
     <Folder Include="app\share\footer\" />
     <Folder Include="app\share\navigation\" />
     <Folder Include="app\share\services\" />
-    <Folder Include="App_Data\" />
     <Folder Include="Assets\client\" />
   </ItemGroup>
   <ItemGroup>
