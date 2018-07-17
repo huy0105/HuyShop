@@ -1,3 +1,2 @@
 ﻿(function () {
-    angular.module('huyshop.common')
-})();
+    angular.module('huyshop.common', ['ui-router'])})();
