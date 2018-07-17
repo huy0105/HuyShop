@@ -26,7 +26,7 @@
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-blue sidebar-mini" ng-app="huyshop">
     <!-- Site wrapper -->
     <div class="wrapper">
         <header class="main-header">
@@ -389,7 +389,7 @@
         <!-- =============================================== -->
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
-           
+           <div ui-view></div>
         </div>
         <!-- /.content-wrapper -->
         <footer class="main-footer">
@@ -583,6 +583,12 @@
     <!-- Begin Angular JS -->
     <script src="~/Assets/admin/libs/angular/angular.js"></script>
     <script src="~/Assets/admin/libs/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="~/app/share/modules/huyshop.common.js"></script>
+    <script src="~/app/components/product/products.module.js"></script>
+    <script src="~/app/app.js"></script>
+    <script src="~/app/components/product/productAddController.js"></script>
+    <script src="~/app/components/product/productListController.js"></script>
+    <script src="~/app/components/home/homeController.js"></script>
     <script>
   $(document).ready(function () {
     $('.sidebar-menu').tree()
