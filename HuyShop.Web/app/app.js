@@ -1,6 +1,10 @@
 ﻿/// <reference path="/Assets/admin/libs/angular/angular.js" />
 (function () {
-    angular.module('huyshop', ['huyshop.products', 'huyshop.common']).config(config);
+    angular.module('huyshop',
+        ['huyshop.products',
+         'huyshop.products_categories',
+         'huyshop.common'])
+        .config(config);
 
     config.$inject = ['$stateProvider', '$urlRouterProvider'];
 
