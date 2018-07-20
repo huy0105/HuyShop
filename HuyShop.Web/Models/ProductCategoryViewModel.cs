@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace HuyShop.Web.Models
 {
@@ -21,5 +23,23 @@ namespace HuyShop.Web.Models
         public bool? HomeFlag { set; get; }
 
         public virtual IEnumerable<ProductViewModel> Products { set; get; }
+
+        public DateTime? CreatedDate { set; get; }
+
+
+        public string CreatedBy { set; get; }
+
+        public DateTime? UpdatedDate { set; get; }
+
+
+        public string UpdatedBy { set; get; }
+
+
+        public string MetaKeyword { set; get; }
+
+        public string MetaDescription { set; get; }
+
+        [Required(ErrorMessage = "Yêu cầu nhập trạng thái")]
+        public bool Status { set; get; }
     }
 }
